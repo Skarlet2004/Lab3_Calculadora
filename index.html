@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+    let c="";
+
+    while(c!="salir"){
+    let a = parseInt(prompt("Ingrese Numero 1"));
+    c = prompt("Que operacion desea");
+    let b = parseInt(prompt("Ingrese Numero 2"));
+   
+
+    // EL USUARIO VA A CERRAR EL PROGRAMA 
+    if(c=== "salir"){
+        document.write("Ha cerrado la calculadora. ¡Hasta Luego!"); break;
+    }
+    alert(realizarOperacion(a, c, b));
+    }
+
+   
+
+
+    function realizarOperacion(num1, operacion,num2) {
+        // OPERACION DE SUMA
+        if (operacion == "+") {
+            let suma = num1 + num2;
+            return suma;
+        }
+
+        //OPERACION DE RESTA
+
+        else if (operacion == "-") {
+            let resta = num1 - num2;
+            return resta;
+        }
+        //OPERACION DE MULTIPLICACION 
+
+        else if (operacion == "*") {
+            let multi = num1 * num2;
+            return multi;
+        }
+        //OPERACION DE DIVISION 
+        else if (operacion == "/") {
+            // verificar si num2 es 0
+            if(num2===0){
+                return "Error: no se puede dividir por 0";
+            }
+            else{
+
+            let division = num1 / num2;
+            return division;
+            }
+
+        // SELECCION ERRONEA 
+        } else{
+            return "Seleccion erronea. Por favor indique unos valores adecuados" ;
+        }
+
+    }
+
+
+</script>
+
+
+<body>
+
+</body>
+
+</html>
